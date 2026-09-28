@@ -1,0 +1,223 @@
+<title>SMAS Privacy Policy</title>
+<meta name="description" content="What SMAS collects, why, and how connected-account data is handled — for Facebook, Instagram, and TikTok publishing.">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:ital,wght@0,400;0,500;0,600;1,400;1,500&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+  :root{
+    --bg:#f5f6f9; --surface:#ffffff; --text:#14161c; --text-muted:#5b6472;
+    --border:#dee2ea; --accent:#3552d6; --accent-2:#7048e8; --accent-soft:#eaeefc;
+    --serif:'Newsreader',Georgia,'Times New Roman',serif;
+    --sans:'IBM Plex Sans',-apple-system,Segoe UI,Arial,sans-serif;
+    --mono:'IBM Plex Mono',Consolas,Menlo,monospace;
+  }
+  @media (prefers-color-scheme:dark){
+    :root:not([data-theme="light"]){
+      --bg:#10131a; --surface:#171b24; --text:#e7e9ee; --text-muted:#9aa3b2;
+      --border:#2a2f3b; --accent:#7c93ff; --accent-2:#b69cff; --accent-soft:#1d2233;
+    }
+  }
+  :root[data-theme="dark"]{
+    --bg:#10131a; --surface:#171b24; --text:#e7e9ee; --text-muted:#9aa3b2;
+    --border:#2a2f3b; --accent:#7c93ff; --accent-2:#b69cff; --accent-soft:#1d2233;
+  }
+  *{box-sizing:border-box;}
+  body{ background:var(--bg); color:var(--text); font-family:var(--sans); margin:0; line-height:1.65; -webkit-font-smoothing:antialiased; }
+  a{color:var(--accent); text-decoration:none;}
+  a:hover{text-decoration:underline;}
+  a:focus-visible{outline:2px solid var(--accent); outline-offset:3px; border-radius:2px;}
+
+  header.masthead{
+    border-bottom:1px solid var(--border); padding:22px 24px;
+    display:flex; align-items:baseline; justify-content:space-between; gap:16px; flex-wrap:wrap;
+  }
+  .wordmark{ font-family:var(--serif); font-style:italic; font-weight:500; font-size:24px; color:var(--text); }
+  .wordmark em{ color:var(--accent); font-style:italic; }
+  nav.masthead-links{ display:flex; gap:22px; font-size:14px; color:var(--text-muted); }
+  nav.masthead-links a{ color:var(--text-muted); }
+  nav.masthead-links a:hover{ color:var(--accent); }
+  nav.masthead-links a.current{ color:var(--accent); }
+
+  .doc-shell{ max-width:1040px; margin:0 auto; padding:48px 24px 64px; display:grid; grid-template-columns:220px 1fr; gap:56px; }
+
+  .doc-head{ grid-column:1/-1; margin-bottom:8px; }
+  .eyebrow{ font-family:var(--mono); font-size:12px; letter-spacing:0.08em; text-transform:uppercase; color:var(--accent); margin:0 0 12px; }
+  h1{ font-family:var(--serif); font-weight:500; font-size:clamp(30px,4vw,42px); margin:0 0 10px; text-wrap:balance; }
+  .updated{ font-size:13.5px; color:var(--text-muted); }
+
+  aside.toc{ font-size:13.5px; }
+  aside.toc .toc-label{ font-family:var(--mono); text-transform:uppercase; letter-spacing:0.06em; font-size:11px; color:var(--text-muted); margin:0 0 12px; }
+  aside.toc ol{ list-style:none; margin:0; padding:0; counter-reset:toc; }
+  aside.toc li{ counter-increment:toc; margin-bottom:9px; }
+  aside.toc a{ color:var(--text-muted); display:flex; gap:8px; }
+  aside.toc a::before{ content:counter(toc); font-family:var(--mono); color:var(--accent); width:1.4em; flex-shrink:0; }
+  aside.toc a:hover{ color:var(--accent); text-decoration:none; }
+  @media (max-width:760px){ aside.toc{ display:none; } .doc-shell{ grid-template-columns:1fr; } }
+
+  article.doc{ max-width:68ch; }
+  article.doc section{ margin:0 0 40px; scroll-margin-top:24px; }
+  article.doc h2{ font-family:var(--serif); font-weight:500; font-size:22px; margin:0 0 14px; }
+  article.doc h2 .num{ font-family:var(--mono); font-size:14px; color:var(--accent); margin-right:10px; }
+  article.doc p{ margin:0 0 14px; }
+  article.doc p:last-child{ margin-bottom:0; }
+  article.doc ul{ margin:0 0 14px; padding-left:22px; }
+  article.doc li{ margin-bottom:8px; }
+  code{ font-family:var(--mono); font-size:0.92em; background:var(--accent-soft); color:var(--accent); padding:0.12em 0.4em; border-radius:4px; }
+
+  table.data-map{ width:100%; border-collapse:collapse; margin:0 0 16px; font-size:14px; }
+  table.data-map th, table.data-map td{ text-align:left; padding:10px 12px; border-bottom:1px solid var(--border); vertical-align:top; }
+  table.data-map th{ font-family:var(--mono); font-size:11px; text-transform:uppercase; letter-spacing:0.05em; color:var(--text-muted); font-weight:500; }
+  table.data-map td:first-child{ font-family:var(--mono); font-size:13px; color:var(--accent); white-space:nowrap; }
+
+  .callout{
+    background:var(--surface); border:1px solid var(--border); border-left:3px solid var(--accent);
+    border-radius:6px; padding:16px 18px; font-size:14.5px; color:var(--text-muted); margin:0 0 40px;
+  }
+
+  footer{ border-top:1px solid var(--border); padding:28px 24px 40px; }
+  footer .foot-inner{ max-width:1040px; margin:0 auto; display:flex; justify-content:space-between; flex-wrap:wrap; gap:14px; font-size:13px; color:var(--text-muted); }
+  footer nav{ display:flex; gap:20px; }
+  footer nav a{ color:var(--text-muted); }
+  footer nav a:hover{ color:var(--accent); }
+</style>
+
+<header class="masthead">
+  <span class="wordmark">SM<em>AS</em></span>
+  <nav class="masthead-links">
+    <a href="https://resid-huseynov.github.io/smas-site/index.html">Home</a>
+    <a href="https://resid-huseynov.github.io/smas-site/terms.html">Terms</a>
+    <a href="https://resid-huseynov.github.io/smas-site/privacy.html" class="current">Privacy</a>
+  </nav>
+</header>
+
+<div class="doc-shell">
+  <div class="doc-head">
+    <p class="eyebrow">Legal</p>
+    <h1>Privacy Policy</h1>
+    <p class="updated">Last updated September 28, 2026</p>
+  </div>
+
+  <aside class="toc">
+    <p class="toc-label">On this page</p>
+    <ol>
+      <li><a href="#overview">Overview</a></li>
+      <li><a href="#collect">What we collect</a></li>
+      <li><a href="#use">How we use it</a></li>
+      <li><a href="#third-parties">Third parties</a></li>
+      <li><a href="#security">Storage &amp; security</a></li>
+      <li><a href="#retention">Retention</a></li>
+      <li><a href="#rights">Your rights</a></li>
+      <li><a href="#children">Children's privacy</a></li>
+      <li><a href="#changes">Changes</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ol>
+  </aside>
+
+  <article class="doc">
+    <section id="overview">
+      <h2><span class="num">01</span>Overview</h2>
+      <p>
+        SMAS is a publishing pipeline, not an audience-data product: it moves
+        content from your RSS feeds to your own connected Facebook, Instagram,
+        and (soon) TikTok accounts. This policy covers what we collect to make
+        that happen, and nothing beyond it — we don't read your accounts'
+        follower data, direct messages, or analytics beyond the follower and
+        view counts you can already see on your own dashboard.
+      </p>
+    </section>
+
+    <section id="collect">
+      <h2><span class="num">02</span>What we collect</h2>
+      <table class="data-map">
+        <tr><th>Data</th><th>Why</th></tr>
+        <tr><td>Telegram user &amp; chat ID</td><td>Identify you as an operator inside the bot; route messages and approvals.</td></tr>
+        <tr><td>Platform account ID + access token</td><td>Granted via Meta Login / TikTok Login Kit; used only to publish to that specific account. Tokens are encrypted at rest.</td></tr>
+        <tr><td>RSS feed URLs you add</td><td>Polled on a schedule to detect new articles for that source.</td></tr>
+        <tr><td>Article text, images, and links you publish or approve</td><td>Rewritten, rendered, and posted to your connected accounts.</td></tr>
+        <tr><td>Follower count &amp; view snapshots</td><td>Shown back to you in the operator dashboard; not shared outside your own view of it.</td></tr>
+      </table>
+    </section>
+
+    <section id="use">
+      <h2><span class="num">03</span>How we use it</h2>
+      <p>
+        Every field above exists to run the fetch → rewrite → publish pipeline
+        described in the Terms of Service, or to show you your own
+        connected-account statistics. We don't sell data, run advertising off
+        it, or share it with anyone outside the third parties in the next
+        section that are technically required to publish on your behalf.
+      </p>
+    </section>
+
+    <section id="third-parties">
+      <h2><span class="num">04</span>Third parties</h2>
+      <ul>
+        <li><strong>Meta Graph API</strong> — publishes to connected Facebook Pages and Instagram professional accounts, under Meta's own <a href="https://www.facebook.com/privacy/policy/" target="_blank" rel="noopener">Privacy Policy</a>.</li>
+        <li><strong>TikTok Content Posting API</strong> — publishes to connected TikTok accounts, under TikTok's <a href="https://www.tiktok.com/legal/page/uspes/privacy-policy/en" target="_blank" rel="noopener">Privacy Policy</a>.</li>
+        <li><strong>OpenAI</strong> — drafts captions and hashtags from your source article text; article content is sent for this purpose only, not your access tokens or Telegram identifiers.</li>
+      </ul>
+      <p>Each of these only receives the specific data required for the step it performs.</p>
+    </section>
+
+    <section id="security">
+      <h2><span class="num">05</span>Storage &amp; security</h2>
+      <p>
+        Access tokens are encrypted before storage and decrypted only at the
+        moment a post is published. The database and bot run on
+        infrastructure the operator controls directly — there is no
+        third-party hosting of your data beyond the API calls in the section
+        above.
+      </p>
+    </section>
+
+    <section id="retention">
+      <h2><span class="num">06</span>Retention</h2>
+      <p>
+        Connected-account data is kept for as long as the connection stays
+        active. Disconnecting an account (from the bot or from the platform's
+        own app-permissions screen) stops publishing immediately; the
+        associated access token is deleted on the next cleanup pass.
+      </p>
+    </section>
+
+    <section id="rights">
+      <h2><span class="num">07</span>Your rights</h2>
+      <p>
+        You can disconnect any account at any time through the Telegram bot.
+        To request full deletion of your operator record and any retained
+        history, email us — see contact below.
+      </p>
+    </section>
+
+    <section id="children">
+      <h2><span class="num">08</span>Children's privacy</h2>
+      <p>
+        SMAS is a publishing tool for media operators and isn't directed at,
+        or knowingly used by, children under 13.
+      </p>
+    </section>
+
+    <section id="changes">
+      <h2><span class="num">09</span>Changes to this policy</h2>
+      <p>
+        We'll update the date above whenever this policy changes. Material
+        changes — a new category of data, a new third party — will also be
+        announced through the Telegram bot.
+      </p>
+    </section>
+
+    <section id="contact">
+      <h2><span class="num">10</span>Contact</h2>
+      <p>Privacy questions or deletion requests: <a href="mailto:zaurley21@gmail.com">zaurley21@gmail.com</a></p>
+    </section>
+  </article>
+</div>
+
+<footer>
+  <div class="foot-inner">
+    <span>&copy; 2026 SMAS</span>
+    <nav>
+      <a href="https://resid-huseynov.github.io/smas-site/index.html">Home</a>
+      <a href="https://resid-huseynov.github.io/smas-site/terms.html">Terms of Service</a>
+    </nav>
+  </div>
+</footer>

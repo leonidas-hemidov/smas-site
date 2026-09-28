@@ -1,0 +1,180 @@
+<title>SMAS</title>
+<meta name="description" content="Newsroom-to-feed automation for Azerbaijani media pages — SMAS fetches, rewrites, and publishes to Facebook, Instagram, and TikTok.">
+<meta name="tiktok-developers-site-verification" content="R0sEvbTC7SyoG5Ep4vBKJLw4EClHpWrd">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:ital,wght@0,400;0,500;0,600;1,400;1,500&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+  :root{
+    --bg:#f5f6f9; --surface:#ffffff; --text:#14161c; --text-muted:#5b6472;
+    --border:#dee2ea; --accent:#3552d6; --accent-2:#7048e8; --accent-soft:#eaeefc;
+    --serif:'Newsreader',Georgia,'Times New Roman',serif;
+    --sans:'IBM Plex Sans',-apple-system,Segoe UI,Arial,sans-serif;
+    --mono:'IBM Plex Mono',Consolas,Menlo,monospace;
+  }
+  @media (prefers-color-scheme:dark){
+    :root:not([data-theme="light"]){
+      --bg:#10131a; --surface:#171b24; --text:#e7e9ee; --text-muted:#9aa3b2;
+      --border:#2a2f3b; --accent:#7c93ff; --accent-2:#b69cff; --accent-soft:#1d2233;
+    }
+  }
+  :root[data-theme="dark"]{
+    --bg:#10131a; --surface:#171b24; --text:#e7e9ee; --text-muted:#9aa3b2;
+    --border:#2a2f3b; --accent:#7c93ff; --accent-2:#b69cff; --accent-soft:#1d2233;
+  }
+  *{box-sizing:border-box;}
+  body{
+    background:var(--bg); color:var(--text); font-family:var(--sans);
+    margin:0; line-height:1.6; -webkit-font-smoothing:antialiased;
+  }
+  a{color:var(--accent); text-decoration:none;}
+  a:hover{text-decoration:underline;}
+  a:focus-visible, button:focus-visible{outline:2px solid var(--accent); outline-offset:3px; border-radius:2px;}
+
+  header.masthead{
+    border-bottom:1px solid var(--border);
+    padding:22px 24px;
+    display:flex; align-items:baseline; justify-content:space-between; gap:16px; flex-wrap:wrap;
+  }
+  .wordmark{
+    font-family:var(--serif); font-style:italic; font-weight:500; font-size:24px;
+    color:var(--text); letter-spacing:0.2px;
+  }
+  .wordmark em{ color:var(--accent); font-style:italic; }
+  nav.masthead-links{ display:flex; gap:22px; font-size:14px; color:var(--text-muted); }
+  nav.masthead-links a{ color:var(--text-muted); }
+  nav.masthead-links a:hover{ color:var(--accent); }
+
+  main{ max-width:760px; margin:0 auto; padding:64px 24px 40px; }
+
+  .eyebrow{
+    font-family:var(--mono); font-size:12px; letter-spacing:0.08em; text-transform:uppercase;
+    color:var(--accent); margin:0 0 14px;
+  }
+  h1{
+    font-family:var(--serif); font-weight:500; font-size:clamp(34px,5vw,50px);
+    line-height:1.12; margin:0 0 20px; text-wrap:balance;
+  }
+  h1 i{ color:var(--accent-2); font-style:italic; }
+  p.lede{
+    font-size:19px; color:var(--text-muted); max-width:62ch; margin:0 0 40px;
+  }
+
+  .pipeline{
+    display:grid; grid-template-columns:repeat(3,1fr); gap:0;
+    border:1px solid var(--border); border-radius:10px; overflow:hidden; margin:0 0 48px;
+    background:var(--surface);
+  }
+  .pipeline .step{ padding:26px 22px; position:relative; }
+  .pipeline .step + .step{ border-left:1px solid var(--border); }
+  .pipeline .num{
+    font-family:var(--mono); font-size:12px; color:var(--accent); margin-bottom:10px; display:block;
+  }
+  .pipeline h3{ font-family:var(--sans); font-size:16px; font-weight:600; margin:0 0 6px; }
+  .pipeline p{ font-size:14px; color:var(--text-muted); margin:0; }
+
+  section.about{ margin:0 0 48px; }
+  section.about h2{
+    font-family:var(--serif); font-weight:500; font-size:24px; margin:0 0 14px;
+  }
+  section.about p{ max-width:65ch; color:var(--text); margin:0 0 16px; }
+  section.about p:last-child{ margin-bottom:0; }
+
+  .platforms{
+    display:flex; gap:10px; flex-wrap:wrap; margin:0 0 56px;
+  }
+  .platform-badge{
+    font-family:var(--mono); font-size:13px; padding:7px 14px; border-radius:999px;
+    background:var(--accent-soft); color:var(--accent); border:1px solid transparent;
+  }
+  .platform-badge.soon{
+    background:transparent; border:1px dashed var(--border); color:var(--text-muted);
+  }
+
+  footer{
+    border-top:1px solid var(--border); padding:28px 24px 40px;
+  }
+  footer .foot-inner{
+    max-width:760px; margin:0 auto; display:flex; justify-content:space-between;
+    flex-wrap:wrap; gap:14px; font-size:13px; color:var(--text-muted);
+  }
+  footer nav{ display:flex; gap:20px; }
+  footer nav a{ color:var(--text-muted); }
+  footer nav a:hover{ color:var(--accent); }
+
+  @media (max-width:640px){
+    .pipeline{ grid-template-columns:1fr; }
+    .pipeline .step + .step{ border-left:none; border-top:1px solid var(--border); }
+  }
+</style>
+
+<div style="position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden">tiktok-developers-site-verification=R0sEvbTC7SyoG5Ep4vBKJLw4EClHpWrd</div>
+<header class="masthead">
+  <span class="wordmark">SM<em>AS</em></span>
+  <nav class="masthead-links">
+    <a href="#pipeline">How it works</a>
+    <a href="https://resid-huseynov.github.io/smas-site/terms.html">Terms</a>
+    <a href="https://resid-huseynov.github.io/smas-site/privacy.html">Privacy</a>
+  </nav>
+</header>
+
+<main>
+  <p class="eyebrow">Content automation</p>
+  <h1>Your newsroom's feed,<br><i>on autopilot.</i></h1>
+  <p class="lede">
+    SMAS watches the RSS feeds your team already publishes to, turns each new
+    article into a platform-ready post, and publishes it to the Facebook,
+    Instagram, and TikTok pages you've connected — no copy-pasting, no missed
+    news cycle.
+  </p>
+
+  <div class="pipeline" id="pipeline">
+    <div class="step">
+      <span class="num">01</span>
+      <h3>Fetch</h3>
+      <p>Polls each connected RSS source on a schedule and detects new articles the moment they're published.</p>
+    </div>
+    <div class="step">
+      <span class="num">02</span>
+      <h3>Rewrite</h3>
+      <p>Drafts a title, caption, and hashtags in Azerbaijani, then renders the article art onto your page's template.</p>
+    </div>
+    <div class="step">
+      <span class="num">03</span>
+      <h3>Publish</h3>
+      <p>Posts to every connected account for that source, or waits for a human nod first — your call, per source.</p>
+    </div>
+  </div>
+
+  <section class="about">
+    <h2>Built for operators, not developers</h2>
+    <p>
+      SMAS is run through a Telegram bot: connect a Facebook Page or Instagram
+      Business account once via OAuth, add the RSS feeds you want mirrored,
+      and the pipeline above runs on its own from that point forward. Approve
+      posts by hand when you want a second look, or let fully-automated
+      sources publish the moment an article lands.
+    </p>
+    <p>
+      Every account you connect stays yours — SMAS holds only the access you
+      grant, publishes only what its rules generate from your own feeds, and
+      can be disconnected from the same bot at any time.
+    </p>
+  </section>
+
+  <div class="platforms">
+    <span class="platform-badge">facebook</span>
+    <span class="platform-badge">instagram</span>
+    <span class="platform-badge soon">tiktok — connecting soon</span>
+  </div>
+</main>
+
+<footer>
+  <div class="foot-inner">
+    <span>&copy; 2026 SMAS</span>
+    <nav>
+      <a href="https://resid-huseynov.github.io/smas-site/terms.html">Terms of Service</a>
+      <a href="https://resid-huseynov.github.io/smas-site/privacy.html">Privacy Policy</a>
+      <a href="mailto:zaurley21@gmail.com">zaurley21@gmail.com</a>
+    </nav>
+  </div>
+</footer>

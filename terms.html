@@ -1,0 +1,226 @@
+<title>SMAS Terms of Service</title>
+<meta name="description" content="The terms governing use of SMAS, the newsroom-to-feed automation bot for Facebook, Instagram, and TikTok.">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:ital,wght@0,400;0,500;0,600;1,400;1,500&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+  :root{
+    --bg:#f5f6f9; --surface:#ffffff; --text:#14161c; --text-muted:#5b6472;
+    --border:#dee2ea; --accent:#3552d6; --accent-2:#7048e8; --accent-soft:#eaeefc;
+    --serif:'Newsreader',Georgia,'Times New Roman',serif;
+    --sans:'IBM Plex Sans',-apple-system,Segoe UI,Arial,sans-serif;
+    --mono:'IBM Plex Mono',Consolas,Menlo,monospace;
+  }
+  @media (prefers-color-scheme:dark){
+    :root:not([data-theme="light"]){
+      --bg:#10131a; --surface:#171b24; --text:#e7e9ee; --text-muted:#9aa3b2;
+      --border:#2a2f3b; --accent:#7c93ff; --accent-2:#b69cff; --accent-soft:#1d2233;
+    }
+  }
+  :root[data-theme="dark"]{
+    --bg:#10131a; --surface:#171b24; --text:#e7e9ee; --text-muted:#9aa3b2;
+    --border:#2a2f3b; --accent:#7c93ff; --accent-2:#b69cff; --accent-soft:#1d2233;
+  }
+  *{box-sizing:border-box;}
+  body{ background:var(--bg); color:var(--text); font-family:var(--sans); margin:0; line-height:1.65; -webkit-font-smoothing:antialiased; }
+  a{color:var(--accent); text-decoration:none;}
+  a:hover{text-decoration:underline;}
+  a:focus-visible{outline:2px solid var(--accent); outline-offset:3px; border-radius:2px;}
+
+  header.masthead{
+    border-bottom:1px solid var(--border); padding:22px 24px;
+    display:flex; align-items:baseline; justify-content:space-between; gap:16px; flex-wrap:wrap;
+  }
+  .wordmark{ font-family:var(--serif); font-style:italic; font-weight:500; font-size:24px; color:var(--text); }
+  .wordmark em{ color:var(--accent); font-style:italic; }
+  nav.masthead-links{ display:flex; gap:22px; font-size:14px; color:var(--text-muted); }
+  nav.masthead-links a{ color:var(--text-muted); }
+  nav.masthead-links a:hover{ color:var(--accent); }
+  nav.masthead-links a.current{ color:var(--accent); }
+
+  .doc-shell{ max-width:1040px; margin:0 auto; padding:48px 24px 64px; display:grid; grid-template-columns:220px 1fr; gap:56px; }
+
+  .doc-head{ grid-column:1/-1; margin-bottom:8px; }
+  .eyebrow{ font-family:var(--mono); font-size:12px; letter-spacing:0.08em; text-transform:uppercase; color:var(--accent); margin:0 0 12px; }
+  h1{ font-family:var(--serif); font-weight:500; font-size:clamp(30px,4vw,42px); margin:0 0 10px; text-wrap:balance; }
+  .updated{ font-size:13.5px; color:var(--text-muted); }
+
+  aside.toc{ font-size:13.5px; }
+  aside.toc .toc-label{ font-family:var(--mono); text-transform:uppercase; letter-spacing:0.06em; font-size:11px; color:var(--text-muted); margin:0 0 12px; }
+  aside.toc ol{ list-style:none; margin:0; padding:0; counter-reset:toc; }
+  aside.toc li{ counter-increment:toc; margin-bottom:9px; }
+  aside.toc a{ color:var(--text-muted); display:flex; gap:8px; }
+  aside.toc a::before{ content:counter(toc); font-family:var(--mono); color:var(--accent); width:1.4em; flex-shrink:0; }
+  aside.toc a:hover{ color:var(--accent); text-decoration:none; }
+  @media (max-width:760px){ aside.toc{ display:none; } .doc-shell{ grid-template-columns:1fr; } }
+
+  article.doc{ max-width:68ch; }
+  article.doc section{ margin:0 0 40px; scroll-margin-top:24px; }
+  article.doc h2{ font-family:var(--serif); font-weight:500; font-size:22px; margin:0 0 14px; }
+  article.doc h2 .num{ font-family:var(--mono); font-size:14px; color:var(--accent); margin-right:10px; }
+  article.doc p{ margin:0 0 14px; }
+  article.doc p:last-child{ margin-bottom:0; }
+  article.doc ul{ margin:0 0 14px; padding-left:22px; }
+  article.doc li{ margin-bottom:8px; }
+  code{ font-family:var(--mono); font-size:0.92em; background:var(--accent-soft); color:var(--accent); padding:0.12em 0.4em; border-radius:4px; }
+
+  .callout{
+    background:var(--surface); border:1px solid var(--border); border-left:3px solid var(--accent);
+    border-radius:6px; padding:16px 18px; font-size:14.5px; color:var(--text-muted); margin:0 0 40px;
+  }
+
+  footer{ border-top:1px solid var(--border); padding:28px 24px 40px; }
+  footer .foot-inner{ max-width:1040px; margin:0 auto; display:flex; justify-content:space-between; flex-wrap:wrap; gap:14px; font-size:13px; color:var(--text-muted); }
+  footer nav{ display:flex; gap:20px; }
+  footer nav a{ color:var(--text-muted); }
+  footer nav a:hover{ color:var(--accent); }
+</style>
+
+<header class="masthead">
+  <span class="wordmark">SM<em>AS</em></span>
+  <nav class="masthead-links">
+    <a href="https://resid-huseynov.github.io/smas-site/index.html">Home</a>
+    <a href="https://resid-huseynov.github.io/smas-site/terms.html" class="current">Terms</a>
+    <a href="https://resid-huseynov.github.io/smas-site/privacy.html">Privacy</a>
+  </nav>
+</header>
+
+<div class="doc-shell">
+  <div class="doc-head">
+    <p class="eyebrow">Legal</p>
+    <h1>Terms of Service</h1>
+    <p class="updated">Last updated September 28, 2026</p>
+  </div>
+
+  <aside class="toc">
+    <p class="toc-label">On this page</p>
+    <ol>
+      <li><a href="#acceptance">Acceptance</a></li>
+      <li><a href="#what-it-does">What SMAS does</a></li>
+      <li><a href="#authorization">Connected accounts</a></li>
+      <li><a href="#acceptable-use">Acceptable use</a></li>
+      <li><a href="#content">Content responsibility</a></li>
+      <li><a href="#availability">Availability</a></li>
+      <li><a href="#termination">Termination</a></li>
+      <li><a href="#liability">Liability</a></li>
+      <li><a href="#changes">Changes</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ol>
+  </aside>
+
+  <article class="doc">
+    <section id="acceptance">
+      <h2><span class="num">01</span>Acceptance of these terms</h2>
+      <p>
+        These terms apply to anyone who connects a Facebook Page, Instagram
+        professional account, or TikTok account to SMAS ("the service"),
+        whether directly or as an operator managing pages on behalf of a
+        publisher. Connecting an account, or using the Telegram bot that
+        drives SMAS, means you accept the terms below.
+      </p>
+    </section>
+
+    <section id="what-it-does">
+      <h2><span class="num">02</span>What SMAS does</h2>
+      <p>
+        SMAS reads RSS feeds you configure, drafts a title, caption, and
+        hashtag set for each new article, renders it onto your page's visual
+        template, and publishes the result to the accounts you've connected —
+        either automatically or after your explicit approval, depending on
+        how you've configured that source. You can also compose and publish
+        one-off posts directly through the Telegram bot.
+      </p>
+    </section>
+
+    <section id="authorization">
+      <h2><span class="num">03</span>Connected accounts &amp; authorization</h2>
+      <p>
+        Connecting an account is done through each platform's own OAuth flow
+        (Meta Login, TikTok Login Kit). You must be an administrator, editor,
+        or otherwise authorized manager of any Page or account you connect —
+        SMAS will only ever publish through the specific permission grant that
+        platform's login screen shows you before you approve it.
+      </p>
+      <p>
+        You can revoke this access at any time, either from inside the
+        Telegram bot or from the connected-apps settings of the platform
+        itself. Revoking access stops all future publishing to that account
+        immediately.
+      </p>
+    </section>
+
+    <section id="acceptable-use">
+      <h2><span class="num">04</span>Acceptable use</h2>
+      <ul>
+        <li>Only connect Pages and accounts you're authorized to manage.</li>
+        <li>Don't use SMAS to publish spam, deceptive content, or material that violates Meta's Platform Terms or TikTok's Developer Terms and Community Guidelines.</li>
+        <li>Don't use the automated-rewrite pipeline to strip attribution from source articles in a way that misleads readers about where the content originated.</li>
+        <li>Don't attempt to exceed, circumvent, or abuse the rate limits either platform's API imposes.</li>
+      </ul>
+    </section>
+
+    <section id="content">
+      <h2><span class="num">05</span>Content responsibility</h2>
+      <p>
+        You're responsible for the accuracy and legality of everything
+        published through your connected accounts, including text that SMAS's
+        writing assistant drafted from your source feed. The assistant is a
+        drafting tool, not an editor of record — review automated output
+        before enabling unattended publishing for a source, if accuracy
+        matters for that source.
+      </p>
+    </section>
+
+    <section id="availability">
+      <h2><span class="num">06</span>Service availability</h2>
+      <p>
+        SMAS is offered on a best-effort basis, without an uptime guarantee.
+        Feed polling, rendering, or publishing may pause during maintenance or
+        upstream outages at Meta, TikTok, or the RSS sources themselves.
+      </p>
+    </section>
+
+    <section id="termination">
+      <h2><span class="num">07</span>Termination</h2>
+      <p>
+        You may disconnect any account and stop using SMAS at any time. We
+        may suspend publishing for an account that violates the acceptable-use
+        section above, that a platform has flagged for policy violations, or
+        that's connected fraudulently.
+      </p>
+    </section>
+
+    <section id="liability">
+      <h2><span class="num">08</span>Limitation of liability</h2>
+      <p>
+        SMAS is provided as-is. To the extent permitted by law, we're not
+        liable for lost engagement, missed posts, platform-side account
+        actions, or damages arising from content published through the
+        service — automated or manually approved.
+      </p>
+    </section>
+
+    <section id="changes">
+      <h2><span class="num">09</span>Changes to these terms</h2>
+      <p>
+        We may update these terms as SMAS adds platforms or capabilities.
+        The "last updated" date above always reflects the current version;
+        continued use after a change means you accept the update.
+      </p>
+    </section>
+
+    <section id="contact">
+      <h2><span class="num">10</span>Contact</h2>
+      <p>Questions about these terms: <a href="mailto:zaurley21@gmail.com">zaurley21@gmail.com</a></p>
+    </section>
+  </article>
+</div>
+
+<footer>
+  <div class="foot-inner">
+    <span>&copy; 2026 SMAS</span>
+    <nav>
+      <a href="https://resid-huseynov.github.io/smas-site/index.html">Home</a>
+      <a href="https://resid-huseynov.github.io/smas-site/privacy.html">Privacy Policy</a>
+    </nav>
+  </div>
+</footer>
