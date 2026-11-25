@@ -42,6 +42,8 @@
   nav.masthead-links a.current{ color:var(--accent); }
 
   .doc-shell{ max-width:1040px; margin:0 auto; padding:48px 24px 64px; display:grid; grid-template-columns:220px 1fr; gap:56px; }
+  .doc-title-row{ display:flex; align-items:center; gap:14px; }
+  .doc-icon{ width:44px; height:44px; border-radius:10px; flex-shrink:0; }
 
   .doc-head{ grid-column:1/-1; margin-bottom:8px; }
   .eyebrow{ font-family:var(--mono); font-size:12px; letter-spacing:0.08em; text-transform:uppercase; color:var(--accent); margin:0 0 12px; }
@@ -91,7 +93,7 @@
 <div class="doc-shell">
   <div class="doc-head">
     <p class="eyebrow">Legal</p>
-    <h1>Terms of Service</h1>
+    <div class="doc-title-row"><img src="icon.png" alt="SMAS" class="doc-icon"><h1>Terms of Service</h1></div>
     <p class="updated">Last updated September 28, 2026</p>
   </div>
 
