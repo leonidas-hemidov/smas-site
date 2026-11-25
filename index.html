@@ -1,6 +1,9 @@
 <title>SMAS</title>
 <meta name="description" content="Newsroom-to-feed automation for Azerbaijani media pages — SMAS fetches, rewrites, and publishes to Facebook, Instagram, and TikTok.">
 <meta name="tiktok-developers-site-verification" content="R0sEvbTC7SyoG5Ep4vBKJLw4EClHpWrd">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
+<link rel="icon" type="image/png" sizes="512x512" href="icon.png">
+<link rel="apple-touch-icon" href="favicon-180.png">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:ital,wght@0,400;0,500;0,600;1,400;1,500&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
 <style>
@@ -36,10 +39,12 @@
     display:flex; align-items:baseline; justify-content:space-between; gap:16px; flex-wrap:wrap;
   }
   .wordmark{
-    font-family:var(--serif); font-style:italic; font-weight:500; font-size:24px;
+    display:inline-flex; align-items:center; gap:12px;
+    font-family:var(--serif); font-style:italic; font-weight:500; font-size:27px;
     color:var(--text); letter-spacing:0.2px;
   }
   .wordmark em{ color:var(--accent); font-style:italic; }
+  .brand-icon{ width:48px; height:48px; border-radius:11px; display:block; }
   nav.masthead-links{ display:flex; gap:22px; font-size:14px; color:var(--text-muted); }
   nav.masthead-links a{ color:var(--text-muted); }
   nav.masthead-links a:hover{ color:var(--accent); }
@@ -109,7 +114,7 @@
 
 <div style="position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden">tiktok-developers-site-verification=R0sEvbTC7SyoG5Ep4vBKJLw4EClHpWrd</div>
 <header class="masthead">
-  <span class="wordmark">SM<em>AS</em></span>
+  <span class="wordmark"><img src="icon.png" alt="SMAS" class="brand-icon">SM<em>AS</em></span>
   <nav class="masthead-links">
     <a href="#pipeline">How it works</a>
     <a href="https://leonidas-hemidov.github.io/smas-site/terms.html">Terms</a>
